@@ -3,10 +3,10 @@
 ; Leaving out the ludicrously easy ones.
 
 ; 15: Double Down
-(fn [x] (* x 2))
+#(* % 2)
 
 ; 16: Hello World
-(fn [x] (str "Hello, " x "!"))
+#(str "Hello, " % "!")
 
 ; 19: Last element
 ; Restrictions: last
@@ -19,8 +19,16 @@
 ; Restrictions: nth
 (fn [x, y] ((vec x) y))
 
-; 22: Count a sequence
+; 22: Count a sence
 ; Restrictions: count
-(fn [coll] (reduce (fn [x, coll] (inc x)) 0 coll))
+#(reduce (fn [x, %] (inc x)) 0 %)
 
+; 23: Reverse a sence
+; Restrictions: reverse, rseq
+#(reduce conj '() %)
 
+; 24: Sum It All Up
+#(reduce + %)
+
+; 25: Find the odd numbers
+#(filter odd? %)
