@@ -78,4 +78,4 @@
 
 ; 39: Interleave two seqs
 ; Restrictions: interleave
-
+(fn [x y] (mapcat #(conj [] %1 %2) x y))
