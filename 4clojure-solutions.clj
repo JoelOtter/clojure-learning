@@ -79,3 +79,7 @@
 ; 39: Interleave two seqs
 ; Restrictions: interleave
 (fn [x y] (mapcat #(conj [] %1 %2) x y))
+
+; 40: Interpose a sequence
+; Restrictions: interpose
+(fn [n s] (drop-last (mapcat #(conj [] % n) s)))
