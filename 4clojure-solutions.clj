@@ -83,3 +83,12 @@
 ; 40: Interpose a sequence
 ; Restrictions: interpose
 (fn [n s] (drop-last (mapcat #(conj [] % n) s)))
+
+; 41: Drop every Nth item
+(fn [s n] (mapcat #(take (dec n) %) (partition-all n s)))
+
+; 42: Factorial fun
+#(reduce * (range 1 (inc %)))
+
+; 43: Reverse interleave
+#(apply map list (partition %2 %1))
