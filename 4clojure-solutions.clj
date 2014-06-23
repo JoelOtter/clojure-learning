@@ -92,3 +92,9 @@
 
 ; 43: Reverse interleave
 #(apply map list (partition %2 %1))
+
+; 44: Rotate a sequence
+; TODO
+
+; 45: Intro to iterate
+'(1 4 7 10 13)
